@@ -1,0 +1,144 @@
+.text-box {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    text-shadow: 2px;
+    gap: 20px;
+}
+
+/* .text-box h3 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+.text-box p {
+    font-size: 2rem;
+    font-weight: lighter;
+} */
+@keyframes mouse-ani {
+    0% {
+        top: 0px;
+    }
+    50% {
+        top: 50px;
+    }
+    100% {
+        top: 0px;
+    }
+}
+.btn-arrow {
+    position: relative;
+    animation-name: mouse-ani;
+    animation-duration: s;
+    animation-iteration-count: infinite;
+}
+
+.about-box {
+    /* display: flex; */
+    color: white;
+    width: 100%;
+    padding: 5%;
+    backdrop-filter: blur(2px);
+}
+.about_head {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 50%;
+    /* font-size: 5rem;
+    font-weight: bolder; */
+}
+.about_text {
+    font-weight: 500;
+    width: 50%;
+    font-size: 1.5rem;
+}
+.work {
+    width: 100%;
+    /* display: flex; */
+    padding: 2% 8%;
+}
+.work-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.pro-div {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    padding: 2%;
+    background-color: black;
+    border-radius: 20px;
+    height: 50%;
+}
+.pro-div div {
+    color: white;
+    display: flex;
+    align-items: center;
+    height: 5%;
+    text-align: center;
+}
+.pro-div img {
+    height: 95%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.c-page {
+    padding: 7%;
+    color: white;
+}
+.login_btn {
+    color: white;
+    font-size: x-large;
+    border: 2px solid white;
+}
+.logo-img {
+    height: 70px;
+    border-radius: 10px;
+}
+.foot {
+    justify-content: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+.c-page {
+    padding: 7%;
+    color: white;
+}
+.sub_btn {
+    color: white;
+    font-size: x-large;
+    border: 2px solid white;
+}
+.p-page {
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    color: white;
+}
+.pp-div-1 {
+    padding: 7%;
+}
+.product_box_style {
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 2%;
+}
+.product_buy_btn {
+    border: 2px solid white;
+    color: white;
+}
+.product_buy_btn:hover {
+    border: 2px solid black;
+    color: black;
+    background-color: white;
+}
