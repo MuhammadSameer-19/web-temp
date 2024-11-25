@@ -4,36 +4,7 @@
 body {
     cursor: crosshair;
 }
-/* .bg-img {
-    background-image: url("{{ asset('/Web-Temp_bg.png') }}");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-} */
-/* .logo-img {
-    height: 70px;
-    border-radius: 10px;
-}
-.text-box {
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100%;
-    text-shadow: 2px;
-    gap: 20px;
-} */
-
-/* .text-box h3 {
-    font-size: 3rem;
-    font-weight: bold;
-}
-.text-box p {
-    font-size: 2rem;
-    font-weight: lighter;
-} */
-/* @keyframes mouse-ani {
+@keyframes mouse-ani {
     0% {
         top: 0px;
     }
@@ -47,6 +18,9 @@ body {
 .btn-arrow {
     position: relative;
     animation-name: mouse-ani;
-    animation-duration: s;
+    animation-duration: 2s;
     animation-iteration-count: infinite;
-} */
+}
+.temp-head {
+    text-shadow: 5px 3px 2px purple;
+}

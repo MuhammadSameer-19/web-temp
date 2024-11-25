@@ -1,8 +1,8 @@
     <x-web_layout>
     <div class="bg-img">     
         <div class="text-box">
-            <h1 class="text-5xl font-bold md:text-9xl md:font-black">Web-Temp</h1>
-            <h3 class="text-center text-2xl font-semibold md:text-6xl md:font-bold">Explore Variety Of Website Templates</h3>
+            <h1 class="text-5xl font-bold md:text-9xl md:font-black temp-head">Web-Temp</h1>
+            <h3 class="text-center text-2xl font-semibold md:text-6xl md:font-bold temp-head">Explore Variety Of Website Templates</h3>
             <p class="text-center text-lg font-extralight md:text-xl md:font-light">Get Your Dream Site</p>
             <span class="font-extralight">Scroll Down</span><span class="btn-arrow">🖱️</span>
         </div>
@@ -39,7 +39,7 @@
             Cypherpunk Digital
             </div>
             <img src="{{asset("/project-11.png")}}"></div>
-          <div style="font-size:large" class="w-full flex justify-center place-items-center"><button class=" bg-black text-white p-2 rounded-full"><a href="./product">Order Now</a></button></div>
+          <div style="font-size:large" class="w-full flex justify-center place-items-center"><button class=" bg-black text-white o-btn p-3 rounded-full"><a href="./product">Order Now</a></button></div>
           </div>
           </div>
         </div>

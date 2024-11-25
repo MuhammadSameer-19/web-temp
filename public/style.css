@@ -18,7 +18,7 @@
     font-size: 2rem;
     font-weight: lighter;
 } */
-@keyframes mouse-ani {
+/* @keyframes mouse-ani {
     0% {
         top: 0px;
     }
@@ -31,10 +31,8 @@
 }
 .btn-arrow {
     position: relative;
-    animation-name: mouse-ani;
-    animation-duration: s;
-    animation-iteration-count: infinite;
-}
+    animation: mouse-ani 5s infinite none infinite forwards none;
+} */
 
 .about-box {
     /* display: flex; */
