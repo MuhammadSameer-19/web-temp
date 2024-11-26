@@ -24,7 +24,7 @@
               </div>
               <div class=" pt-4 justify-center flex flex-col">
               <a href="./admin-panel" class="btn sub_btn btn-lg">Delete</a>
-              <a href="./admin-panel" class="btn sub_btn btn-lg">Back</a>
+              <a href="{{url('Products')}}" class="btn sub_btn btn-lg">Back</a>
               </div>
             </form>
           </div>

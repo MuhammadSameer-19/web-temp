@@ -9,10 +9,12 @@
       <div class="row col-md-6 col-md-offset-3">
         <div class="text-white panel panel-primary">
           <div class="panel-heading text-center">
-            <h1 class="">Add Product</h1>
+            <h1 class="">Update Product</h1>
           </div>
           <div class="panel-body pt-5">
-            <form action="connect.php" method="post">
+          <form action="{{url('Products/'.$product_det->id.'/update')}}" method="POST">
+              @csrf
+              @method('put')
               <div class="form-group">
                 <label for="Pro_Name" class="h4">Product Name</label>
                 <input
@@ -20,7 +22,11 @@
                   class="form-control"
                   id="Pro_Name"
                   name="Pro_Name"
+                  value={{$product_det->Pro_Name}}
                 />
+                @error('Pro_Name')
+                  <span class="text-danger">{{$message}}</span>
+                @enderror
               </div>
               <div class="form-group">
                 <label for="Pro_Detail" class="h4 pt-4">Detail</label>
@@ -49,6 +55,9 @@
                       id="Html_Css"
                     />Html Css</label
                   >
+                  @error('Pro_Detail')
+                  <span class="text-danger">{{$message}}</span>
+                @enderror
                 </div>
               </div>
               <div class="form-group">
@@ -70,39 +79,46 @@
                       id="Blog"
                     />Blog Site</label
                   >
+                  @error('Pro_Category')
+                  <span class="text-danger">{{$message}}</span>
+                @enderror
                 </div>
               </div>
               <div class="form-group">
                 <label for="Pro_Price" class="h4 pt-4">Product Price</label>
                 <input
-                  type="number"
+                  type="text"
                   class="form-control"
                   id="Pro_Price"
                   name="Pro_Price"
+                  value={{$product_det->Pro_Price}}
                 />
+                @error('Pro_Price')
+                  <span class="text-danger">{{$message}}</span>
+                @enderror
               </div>
               <div class="form-group">
-                <label for="Pro_Image" class="h4 pt-4">Product Image Url</label>
+                <label for="Pro_Img" class="h4 pt-4">Product Image Url</label>
                 <input
                   type="text"
                   class="form-control"
-                  id="Pro_Image"
-                  name="Pro_Image"
+                  id="Pro_Img"
+                  name="Pro_Img"
+                  value={{$product_det->Pro_Img}}
                 />
+                @error('Pro_Img')
+                  <span class="text-danger">{{$message}}</span>
+                @enderror
               </div>
               <div class=" pt-4 justify-center flex flex-col">
               <input type="submit" class="btn  btn-lg sub_btn " />
-              <a href="./admin-panel" class="btn sub_btn btn-lg">Back</a>
+              <a href="{{url('Products')}}" class="btn sub_btn btn-lg">Back</a>
               </div>
             </form>
           </div>
           <div class="panel-footer text-right"></div>
         </div>
       </div>
-    </div>
-    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-      <div class="toast-header"></div>
-      <div class="toast-body"></div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
             <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
