@@ -12,7 +12,7 @@
             <h1 class="">Update Product</h1>
           </div>
           <div class="panel-body pt-5">
-          <form action="{{url('Products/'.$product_det->id.'/update')}}" method="POST">
+          <form action="{{url('Admin/'.$product_det->id.'/update')}}" method="POST">
               @csrf
               @method('put')
               <div class="form-group">
@@ -112,7 +112,7 @@
               </div>
               <div class=" pt-4 justify-center flex flex-col">
               <input type="submit" class="btn  btn-lg sub_btn " />
-              <a href="{{url('Products')}}" class="btn sub_btn btn-lg">Back</a>
+              <a href="{{url('Admin')}}" class="btn sub_btn btn-lg">Back</a>
               </div>
             </form>
           </div>

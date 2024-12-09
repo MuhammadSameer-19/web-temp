@@ -20,6 +20,7 @@
               <th>Detail</th>
               <th>Category</th>
               <th>Price</th>
+              <th>Picture</th>
               <th>Options</th>
             </tr>
                 @foreach ($products as $item)
@@ -29,8 +30,9 @@
                     <td>{{$item->Pro_Detail}}</td>
                     <td>{{$item->Pro_Category}}</td>
                     <td>{{$item->Pro_Price}}</td>
-                    <td><a href="{{url("Products/".$item->id."/update")}}" class="btn btn-success">Edit</a>
-                    <a href="{{url("Products/".$item->id."/delete")}}" class=" btn btn-danger"
+                    <td><img src={{$item->Pro_Img}} alt=""></td>
+                    <td><a href="{{url("Admin/".$item->id."/update")}}" class="btn btn-success">Edit</a>
+                    <a href="{{url("Admin/".$item->id."/delete")}}" class=" btn btn-danger"
                     onclick="return confirm('Are You Sure?')"
                     >Delete</a></td>
                   </tr>
@@ -49,7 +51,7 @@
               <div class=" pt-4 justify-center flex flex-col">
               <a href="./admin-panel" class="btn sub_btn btn-lg">View</a>
               <a href="./admin-panel" class="btn sub_btn btn-lg">View All</a> -->
-              <a href="{{url('Products')}}" class="btn sub_btn btn-lg">Back</a>
+              <a href="{{url('Admin')}}" class="btn sub_btn btn-lg">Back</a>
               </div>
             </form>
           </div>
