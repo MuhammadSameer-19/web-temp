@@ -27,7 +27,7 @@ class ProductController extends Controller
                 'Pro_Price' => $request->Pro_Price,
                 'Pro_Img' => $request->Pro_Img]);
 
-        return redirect('Products/add')->with('status','Product Created');        
+        return redirect('Admin/add')->with('status','Product Created');        
     }
     public function Admin_del_page(int $id){
         $product_del = Product::findOrFail($id);
@@ -57,7 +57,7 @@ class ProductController extends Controller
                 'Pro_Price' => $request->Pro_Price,
                 'Pro_Img' => $request->Pro_Img]);
 
-        return redirect('Products/'.$id.'/update')->with('status','Product Update');        
+        return redirect('Admin/'.$id.'/update')->with('status','Product Update');        
     }
     
 }

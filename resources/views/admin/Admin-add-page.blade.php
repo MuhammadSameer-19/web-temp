@@ -15,7 +15,7 @@
             <h1 class="">Add Product</h1>
           </div>
           <div class="panel-body pt-5">
-            <form action="{{url('Products/add')}}" method="POST">
+            <form action="{{url('Admin/add')}}" method="POST">
               @csrf
               <div class="form-group">
                 <label for="Pro_Name" class="h4">Product Name</label>
@@ -111,7 +111,7 @@
               </div>
               <div class=" pt-4 justify-center flex flex-col">
               <input type="submit" class="btn  btn-lg sub_btn " />
-              <a href="{{url('Products')}}" class="btn sub_btn btn-lg">Back</a>
+              <a href="{{url('Admin')}}" class="btn sub_btn btn-lg">Back</a>
               </div>
             </form>
           </div>
