@@ -62,7 +62,7 @@
           <input class="form-control me-2" name="search" id="pro-search"  type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-success" type="submit">Search</button>
           <div id="pro-results" class="row mt-0">
-                <!-- Results will be displayed here dynamically -->
+                
             </div>
         </form>
         <div class="h1 mb-5 text-center pt-16 text-white">All Products</div>
