@@ -14,7 +14,7 @@
             <label for="Email" class="form-label login_label mt-1 h5 ">Enter Your Email:</label>
                 <input name="Email" type="email" class="form-control login_input mt-1 text-black" id="email" required>
                 <label for="Prod_Id" class="form-label login_label mt-1 h5" >Product Id:</label>
-                <input name="Prod_Id" type="number" value={{$product_det->id}} class="form-control login_input mt-1 text-black" disabled><br>
+                <input name="Prod_Id" type="number" value={{$product_det->id}} class="form-control login_input mt-1 text-black"><br>
                 <!-- <select class="form-select mt-4" aria-label="Default select example">
                 <option selected>Select Site Type</option>
                 <option value="1">E-Commerce Site Using React Js</option>
@@ -22,7 +22,7 @@
                 <option value="3">Blog Site Using React Js</option>
                 </select> -->
                 <label for="Customization" class="form-label login_label mt-1 h5">Any Customization:</label>
-                <input name="Customization" type="text" class="form-control mt-1" id="custom">
+                <input name="Customization" type="text" class="form-control mt-1" id="Customization">
                 <div class="text-center flex  justify-center place-items-center"><input type="submit" class="btn  btn-lg sub_btn " /><button class="btn  btn-lg login_btn mt-4" type="button"><a href="{{url("product")}}">Back</a></button></div>
             </form>
             </div>

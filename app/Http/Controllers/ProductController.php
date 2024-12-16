@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Order;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
@@ -41,6 +42,10 @@ class ProductController extends Controller
     public function Admin_view_page(){
         $products=Product::get();
         return view('admin.Admin-view-page',compact('products'));
+    }
+    public function Admin_view_orders(){
+        $order=Order::get();
+        return view('admin.Admin-view-order',compact('order'));
     }
     public function Admin_update_page(Request $request, int $id){
         $request->validate([

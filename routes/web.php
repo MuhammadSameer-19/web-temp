@@ -17,6 +17,7 @@ Route::post('Admin/add',[App\Http\Controllers\ProductController::class,'create_p
 Route::get('Admin/{id}/update',[App\Http\Controllers\ProductController::class,'Admin_upd_page']);
 Route::get('Admin/{id}/delete',[App\Http\Controllers\ProductController::class,'Admin_del_page']);
 Route::get('Admin/view',[App\Http\Controllers\ProductController::class,'Admin_view_page']);
+Route::get('Admin/orders',[App\Http\Controllers\ProductController::class,'Admin_view_orders']);
 Route::put('Admin/{id}/update',[App\Http\Controllers\ProductController::class,'Admin_update_page']);
 
 Route::controller(WebController::class)->group(function () {

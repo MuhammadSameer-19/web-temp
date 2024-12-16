@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Order;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
@@ -47,7 +48,6 @@ class WebController extends Controller
         $products = Product::where('Pro_Name', 'LIKE', "%$search%")
         ->orWhere('Pro_Category', 'LIKE', "%$search%")
         ->get();
-
         return view('product.search-results', compact('products'));
     }
     public function contact()
@@ -63,10 +63,10 @@ class WebController extends Controller
         $request->validate([
             'Name' => 'required|max:255|string',
             'Email' => 'required|max:255|string',
-            'Prod_Id' => 'required',
+            'Prod_Id' => 'required|int',
             'Customization' => 'required|string',
         ]);
-        Product::create([
+        Order::create([
                 'Name' => $request->Name,
                 'Email' => $request->Email,
                 'Prod_Id' => $request->Prod_Id,
