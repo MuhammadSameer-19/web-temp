@@ -42,13 +42,13 @@ class WebController extends Controller
         return view('web.product',compact('products'));
     }
 
-    public function search(Request $request)
+    public function dy_search(Request $request)
     {
-        $search = $request['search'] ?? "";
-        $products = Product::where('Pro_Name', 'LIKE', "%$search%")
+        $search = $request['search_query'] ?? "";
+        $dyn_pro = Product::where('Pro_Name', 'LIKE', "%$search%")
         ->orWhere('Pro_Category', 'LIKE', "%$search%")
         ->get();
-        return view('product.search-results', compact('products'));
+        return view('web.product', compact('dyn_pro'));
     }
     public function contact()
     {
@@ -74,9 +74,10 @@ class WebController extends Controller
 
         return redirect('/product');        
     }
-    public function detail()
+    public function detail(Request $request,int $id)
     {
-        return view('web.product-detail');
+        $product = Product::findOrFail($id);
+        return view('web.product-detail',compact('product'));
     }
     public function Admin_page(){
         return view('admin.Admin-opt-page');

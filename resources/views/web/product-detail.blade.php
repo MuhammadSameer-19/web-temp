@@ -2,7 +2,7 @@
 <div class="bg-img">
 
     <div class="container-fluid">
-    <div class="h1 text-center mb-5 col-12 text-white pt-16">Product</div>
+    <div class="h1 text-center mb-5 col-12 text-white pt-16">Product Detail</div>
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -11,13 +11,13 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="{{asset("ds-home.png")}}" class="d-block w-100" alt="...">
+      <img src={{$product->Pro_Img}} class="d-block w-100" alt="...">
       <div class="backdrop-blur-xl carousel-caption d-none d-md-block">
         <h5 class="h3 text-black">Home Page</h5>
         <p class="p  text-black">Home page of website with auto changing font</p>
       </div>
     </div>
-    <div class="carousel-item">
+    <!-- <div class="carousel-item">
       <img src="{{asset("ds-about.png")}}" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h5 class="h3 text-black">About Us Section</h5>
@@ -30,7 +30,7 @@
         <h5 class="h3 text-black">Payment Page</h5>
         <p class="p  text-black">Payment page with some styling between tilt marquees</p>
       </div>
-    </div>
+    </div> -->
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>

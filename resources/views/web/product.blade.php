@@ -65,7 +65,7 @@
                 <!-- Results will be displayed here dynamically -->
             </div>
         </form>
-        <div class="h1 mb-5 text-center pt-16 text-white">All Products</div>
+        <div class="h1 mb-5 text-center pt-16 text-white">Products</div>
         <div class="w-[90%] flex flex-wrap justify-center place-items-center gap-3">
             @foreach ($products as $pro)
             <div class="w-[75%] md:w-[30%] bg-black p-2 rounded-xl">
@@ -75,7 +75,7 @@
                             <div class="card-subtitle p">{{$pro->Pro_Detail}}</div>    
                             <div class="card-subtitle p">{{$pro->Pro_Catergory}}</div>
                         </div>
-                        <a href="./detail" class="btn product_buy_btn">View</a>
+                        <a href={{url("product/".$pro->id."/detail")}} class="btn product_buy_btn">View</a>
                         <a href="{{url("product/".$pro->id."/order")}}" class="btn product_buy_btn">Buy Now</a>
                     </div>
             @endforeach
@@ -85,13 +85,13 @@
         <script>
             $(document).ready(function() {
                 $('#pro-search').on('keyup', function() {
-                    let query = $(this).val();
-                    if (query.length > 0) {
+                    let search_query = $(this).val();
+                    if (search_query.length > 0) {
                         // Perform the AJAX request
                         $.ajax({
                             url: '{{ route('search') }}',
                             method: 'GET',
-                            data: { query: query },
+                            data: { query: search_query },
                             success: function(response) {
                                 // Update the results section with the response
                                 $('#pro-results').html(response);

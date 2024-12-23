@@ -27,7 +27,7 @@
                     <td>{{$item->Email}}</td>
                     <td>{{$item->Prod_Id}}</td>
                     <td>{{$item->Customization}}</td>
-                    <td><a href="{{url("Admin/view")}}" class="btn btn-success">View Product</a>
+                    <td><a href="{{url("product/".$item->id."/detail")}}" class="btn btn-success">View Product</a>
                     <!-- <a href="{{url("Admin/".$item->id."/delete")}}" class=" btn btn-danger"
                     onclick="return confirm('Are You Sure?')"
                     >Delete</a> -->

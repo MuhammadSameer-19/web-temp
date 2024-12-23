@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\web_controller;
 use App\Http\Controllers\WebController;
 use Illuminate\Support\Facades\Route;
 
@@ -28,8 +27,8 @@ Route::controller(WebController::class)->group(function () {
     Route::get('/contact', 'contact');
     Route::get('product/{id}/order', 'order');
     Route::post('product/{id}/order','place_order');
-    Route::get('/detail', 'detail');
-    Route::get('/search',  'search')->name('search');
+    Route::get('product/{id}/detail', 'detail');
+    Route::get('/search',  'dy_search')->name('search');
     // Route::get('/admin-add','Admin_add_page');
     // Route::get('/admin-del','Admin_del_page');
     // Route::get('/admin-upd','Admin_upd_page');
