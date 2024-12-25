@@ -17,23 +17,23 @@
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{{url('')}}">Home</a>
+            <a class="nav-link active:bg-stone-700 active:text-white" aria-current="page" href="{{url('')}}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{url('contact')}}">Contact</a>
+            <a class="nav-link active:bg-stone-700 active:text-white" href="{{url('contact')}}">Contact</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Products
             </a>
             <ul class="dropdown-menu dropdown-menu-dark">
-              <li><a class="dropdown-item" href="{{url('product')}}">All</a></li>
-              <li><a class="dropdown-item" href="{{url('product/e-commerce')}}">E-Commerce Sites</a></li>
-              <li><a class="dropdown-item" href="{{url('product/blog')}}">Blog Sites</a></li>
+              <li><a class="dropdown-item active:bg-stone-700 active:text-white" href="{{url('product')}}">All</a></li>
+              <li><a class="dropdown-item active:bg-stone-700 active:text-white" href="{{url('product/e-commerce')}}">E-Commerce Sites</a></li>
+              <li><a class="dropdown-item active:bg-stone-700 active:text-white" href="{{url('product/blog')}}">Blog Sites</a></li>
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./login">Login</a>
+            <a class="nav-link active:bg-stone-700 active:text-white" href={{url('/login')}}>Login</a>
           </li>
         </ul>
       </div>

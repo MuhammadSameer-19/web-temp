@@ -36,11 +36,16 @@ return [
     */
 
     'guards' => [
-        'web' => [
-            'driver' => 'session',
-            'provider' => 'users',
-        ],
+    'web' => [
+        'driver' => 'session',
+        'provider' => 'users',
     ],
+
+    'api' => [
+        'driver' => 'passport', // Use Passport driver for API authentication
+        'provider' => 'users', // Specifies the user provider
+    ],
+],
 
     /*
     |--------------------------------------------------------------------------

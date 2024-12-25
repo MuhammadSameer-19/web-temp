@@ -11,7 +11,7 @@ class Order extends Model
     protected $table = 'order';
     protected $fillable=['Name','Email','Prod_Id','Customization'];
     public function product():BelongsTo{
-        return $this->belongsTo(Product::class);
+        return $this->belongsTo(Product::class,'Prod_Id','id');
     }
 }
 		

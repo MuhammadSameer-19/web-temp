@@ -9,10 +9,35 @@
       <div class="row col-md-6 col-md-offset-3">
         <div class="text-white panel panel-primary">
           <div class="panel-heading text-center">
-            <h1 class="">Delete Product</h1>
+            <h1 class="">View Orders</h1>
           </div>
           <div class="panel-body pt-5 pb-20">
-            <form action="connect.php" method="post">
+          
+          <table class="table table-striped table-bordered">
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Product Name</th>
+              <th>Price</th>
+              <th>Customizations</th>
+              <th>Options</th>
+            </tr>
+                @foreach ($order as $item)
+                  <tr>
+                    <td>{{$item->Name}}</td>
+                    <td>{{$item->Email}}</td>
+                    <td>{{$item->product->Pro_Name}}</td>
+                    <td>{{$item->product->Pro_Price}}</td>
+                    <td>{{$item->Customization}}</td>
+                    <td><a href="{{url("product/".$item->id."/detail")}}" class="btn btn-success">View Product</a>
+                    <!-- <a href="{{url("Admin/".$item->id."/delete")}}" class=" btn btn-danger"
+                    onclick="return confirm('Are You Sure?')"
+                    >Delete</a> -->
+                </td>
+                  </tr>
+                @endforeach
+          </table> 
+          <!-- <form action="connect.php" method="post">
               <div class="form-group">
                 <label for="Pro_Name" class="h4">Product Id</label>
                 <input
@@ -23,8 +48,9 @@
                 />
               </div>
               <div class=" pt-4 justify-center flex flex-col">
-              <a href="./admin-panel" class="btn sub_btn btn-lg">Delete</a>
-              <a href="{{url('Products')}}" class="btn sub_btn btn-lg">Back</a>
+              <a href="./admin-panel" class="btn sub_btn btn-lg">View</a>
+              <a href="./admin-panel" class="btn sub_btn btn-lg">View All</a> -->
+              <a href="{{url('Admin')}}" class="btn sub_btn btn-lg">Back</a>
               </div>
             </form>
           </div>

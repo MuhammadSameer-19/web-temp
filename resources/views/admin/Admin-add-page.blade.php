@@ -15,7 +15,7 @@
             <h1 class="">Add Product</h1>
           </div>
           <div class="panel-body pt-5">
-            <form action="{{url('Admin/add')}}" method="POST">
+            <form action="{{url('Admin/add')}}" method="POST" enctype="multipart/form-data">
               @csrf
               <div class="form-group">
                 <label for="Pro_Name" class="h4">Product Name</label>
@@ -100,7 +100,7 @@
               <div class="form-group">
                 <label for="Pro_Img" class="h4 pt-4">Product Image Url</label>
                 <input
-                  type="text"
+                  type="file"
                   class="form-control"
                   id="Pro_Img"
                   name="Pro_Img"
