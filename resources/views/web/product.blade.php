@@ -69,7 +69,7 @@
         <div class="w-[90%] flex flex-wrap justify-center place-items-center gap-3">
             @foreach ($products as $pro)
             <div class="w-[75%] md:w-[30%] bg-black p-2 rounded-xl">
-                        <img src={{$pro->Pro_Img}} alt="" class="rounded-xl h-[75%] w-full object-contain">
+                        <img src={{asset($pro->Pro_Img)}} alt="" class="rounded-xl h-[75%] w-full object-contain">
                         <div class="card-body text-white flex flex-col gap-1">
                             <div class="card-title h4">{{$pro->Pro_Name}}</div>
                             <div class="card-subtitle p">{{$pro->Pro_Detail}}</div>    

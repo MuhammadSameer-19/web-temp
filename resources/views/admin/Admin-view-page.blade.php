@@ -30,7 +30,7 @@
                     <td>{{$item->Pro_Detail}}</td>
                     <td>{{$item->Pro_Category}}</td>
                     <td>{{$item->Pro_Price}}</td>
-                    <td><img src={{$item->Pro_Img}} alt=""></td>
+                    <td><img src={{asset($item->Pro_Img) }} alt=""></td>
                     <td><a href="{{url("Admin/".$item->id."/update")}}" class="btn btn-success">Edit</a>
                     <a href="{{url("Admin/".$item->id."/delete")}}" class=" btn btn-danger"
                     onclick="return confirm('Are You Sure?')"

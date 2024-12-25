@@ -100,11 +100,10 @@
               <div class="form-group">
                 <label for="Pro_Img" class="h4 pt-4">Product Image Url</label>
                 <input
-                  type="text"
+                  type="file"
                   class="form-control"
                   id="Pro_Img"
                   name="Pro_Img"
-                  value={{$product_det->Pro_Img}}
                 />
                 @error('Pro_Img')
                   <span class="text-danger">{{$message}}</span>

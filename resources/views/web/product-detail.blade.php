@@ -11,7 +11,7 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src={{$product->Pro_Img}} class="d-block w-100" alt="...">
+      <img src={{asset($product->Pro_Img)}} class="d-block w-100" alt="...">
       <div class="backdrop-blur-xl carousel-caption d-none d-md-block">
         <h5 class="h3 text-black">Home Page</h5>
         <p class="p  text-black">Home page of website with auto changing font</p>
@@ -42,6 +42,6 @@
   </button>
 </div>
 </div>
-<div class="mx-auto flex flex-col md:flex-row w-[100%] justify-center place-items-center"><button class="btn  btn-lg login_btn mt-4" type="submit"><a href="./product">Back</a></button><button class="btn  btn-lg login_btn mt-4" type="submit"><a href="./order">Order</a></button></div>
+<div class="mx-auto flex flex-col md:flex-row w-[100%] justify-center place-items-center"><button class="btn  btn-lg login_btn mt-4" type="submit"><a href={{url("product")}}>Back</a></button><button class="btn  btn-lg login_btn mt-4" type="submit"><a href={{url("product/".$product->id."/order")}}>Order</a></button></div>
         </div>
 </x-web_layout>

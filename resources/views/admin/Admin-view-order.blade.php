@@ -17,7 +17,8 @@
             <tr>
               <th>Name</th>
               <th>Email</th>
-              <th>Product Id</th>
+              <th>Product Name</th>
+              <th>Price</th>
               <th>Customizations</th>
               <th>Options</th>
             </tr>
@@ -25,7 +26,8 @@
                   <tr>
                     <td>{{$item->Name}}</td>
                     <td>{{$item->Email}}</td>
-                    <td>{{$item->Prod_Id}}</td>
+                    <td>{{$item->product->Pro_Name}}</td>
+                    <td>{{$item->product->Pro_Price}}</td>
                     <td>{{$item->Customization}}</td>
                     <td><a href="{{url("product/".$item->id."/detail")}}" class="btn btn-success">View Product</a>
                     <!-- <a href="{{url("Admin/".$item->id."/delete")}}" class=" btn btn-danger"
