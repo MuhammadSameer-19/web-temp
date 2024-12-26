@@ -18,7 +18,9 @@ class WebController extends Controller
     {
         $search = $request['search'] ?? "";
         if ($search != "") {
-            $products = Product::where('Pro_Name','LIKE',"%$search%")->get();
+            $products = Product::where('Pro_Name', 'LIKE', "%$search%")
+            ->orWhere('Pro_Category', 'LIKE', "%$search%")
+            ->get();
         } else {
             $products = Product::get();
         }
@@ -44,11 +46,11 @@ class WebController extends Controller
 
     public function dy_search(Request $request)
     {
-        $search = $request['search_query'] ?? "";
-        $dyn_pro = Product::where('Pro_Name', 'LIKE', "%$search%")
+        $search = $request['search'] ?? "";
+        $products = Product::where('Pro_Name', 'LIKE', "%$search%")
         ->orWhere('Pro_Category', 'LIKE', "%$search%")
         ->get();
-        return view('web.product', compact('dyn_pro'));
+        return view('web.product', compact('products'));
     }
     public function contact()
     {
