@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Contact;
 use App\Models\Order;
 use App\Models\Product;
 use Illuminate\Http\Request;
@@ -54,6 +55,18 @@ class WebController extends Controller
     }
     public function contact()
     {
+        return view('web.contact');
+    }
+    public function sub_contact(Request $request)
+    {
+        $request->validate([
+            'Email'=> 'required|max:255|string',
+            'Query'=> 'required|max:255|string'
+        ]);
+        Contact::create([
+            'Email' => $request->Email,
+            'Query'=> $request->Query
+        ]);
         return view('web.contact');
     }
     public function order(int $id)

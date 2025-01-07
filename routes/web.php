@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\WebController;
 use Illuminate\Support\Facades\Route;
@@ -10,14 +11,6 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('home');
 // });
-Route::get('Admin',[App\Http\Controllers\ProductController::class,'index']);
-Route::get('Admin/add',[App\Http\Controllers\ProductController::class,'Admin_add_page']);
-Route::post('Admin/add',[App\Http\Controllers\ProductController::class,'create_pro']);
-Route::get('Admin/{id}/update',[App\Http\Controllers\ProductController::class,'Admin_upd_page']);
-Route::get('Admin/{id}/delete',[App\Http\Controllers\ProductController::class,'Admin_del_page']);
-Route::get('Admin/view',[App\Http\Controllers\ProductController::class,'Admin_view_page']);
-Route::get('Admin/orders',[App\Http\Controllers\ProductController::class,'Admin_view_orders']);
-Route::put('Admin/{id}/update',[App\Http\Controllers\ProductController::class,'Admin_update_page']);
 
 Route::controller(WebController::class)->group(function () {
     Route::get('', 'home');
@@ -25,6 +18,7 @@ Route::controller(WebController::class)->group(function () {
     Route::get('/product/e-commerce', 'shop_comm');
     Route::get('/product/blog', 'shop_blog');
     Route::get('/contact', 'contact');
+    Route::post('/contact', 'sub_contact');
     Route::get('product/{id}/order', 'order');
     Route::post('product/{id}/order','place_order');
     Route::get('product/{id}/detail', 'detail');
@@ -35,6 +29,17 @@ Route::controller(WebController::class)->group(function () {
     // Route::get('/admin-view','Admin_view_page');
     // Route::get('/admin-panel','Admin_page');
     // Route::get('/login','login');
+});
+Route::controller(ProductController::class)->group(function(){
+    Route::get('Admin','index');
+    Route::get('Admin/add','Admin_add_page');
+    Route::post('Admin/add','create_pro');
+    Route::get('Admin/{id}/update','Admin_upd_page');
+    Route::get('Admin/{id}/delete','Admin_del_page');
+    Route::get('Admin/view','Admin_view_page');
+    Route::get('Admin/orders','Admin_view_orders');
+    Route::put('Admin/{id}/update','Admin_update_page');
+    Route::get('Admin/queries','Admin_view_queries');
 });
 // Route::get('/dashboard', function () {
 //     return view('dashboard');

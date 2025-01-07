@@ -29,14 +29,13 @@ class ProductService
             'Pro_Detail' => 'required|max:255|string',
             'Pro_Category' => 'required|max:255|string',
             'Pro_Price' => 'required|max:255|string',
-            'Pro_Img' => 'file|sometimes',
+            'Pro_Img' => 'sometimes|file'
         ]);
         $requestData = $request->all();
         $fileName = time().$request->file('Pro_Img')->getClientOriginalName();
         $path = $request->file('Pro_Img')->storeAs('images',$fileName,'public');
         $requestData['Pro_Img'] = '/'.'storage/'.$path;
-        $product = Product::findOrFail($id)->update($requestData);
-        return $product;
+        return Product::findOrFail($id)->update($requestData);
     }
     // Delete a product
     public function deleteProduct(int $id)
