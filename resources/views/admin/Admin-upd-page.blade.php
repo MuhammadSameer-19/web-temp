@@ -12,7 +12,7 @@
             <h1 class="">Update Product</h1>
           </div>
           <div class="panel-body pt-5">
-          <form action="{{url('Admin/'.$product_det->id.'/update')}}" method="POST">
+          <form action="{{url('Admin/'.$product_det->id.'/update')}}" method="POST" enctype="multipart/form-data">
               @csrf
               @method('put')
               <div class="form-group">
@@ -100,6 +100,7 @@
               <div class="form-group">
                 <label for="Pro_Img" class="h4 pt-4">Product Image Url</label>
                 <input
+                value={{$product_det->Pro_Img}}
                   type="file"
                   class="form-control"
                   id="Pro_Img"

@@ -7,12 +7,13 @@
             </div>
             <div class="row justify-content-center">
             <div class="col-8">
-            <form class="form_style mt-4" id="myForm">
-                <label for="email" class="form-label login_label mt-1 h5">Enter Your Email:</label>
-                <input type="email" class="form-control login_input mt-1" id="email" required>
-                <label for="pass" class="form-label login_label mt-1 h5">Your Query:</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
-                <div class="text-center"><button class="btn  btn-lg sub_btn mt-4" type="submit">Submit</button></div>
+            <form action="{{url('/contact')}}" method="POST" class="form_style mt-4" id="myForm">
+            @csrf    
+            <label for="Email" class="form-label login_label mt-1 h5">Enter Your Email:</label>
+                <input name="Email" type="email" class="form-control login_input mt-1" id="email" required>
+                <label for="Query" class="form-label login_label mt-1 h5">Your Query:</label>
+                <textarea name="Query" class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                <div class="text-center"><input class="btn  btn-lg sub_btn mt-4" type="submit"></input></div>
             </form>
             </div>
         </div>

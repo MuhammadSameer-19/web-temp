@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Contact;
 use App\Models\Order;
 use App\Models\Product;
 use App\Services\ProductService;
@@ -58,6 +59,10 @@ class ProductController extends Controller
     public function Admin_view_orders(){
         $order=Order::all();
         return view('admin.Admin-view-order',compact('order'));
+    }
+    public function Admin_view_queries(){
+        $query=Contact::all();
+        return view('admin.Admin-view-query',compact('query'));
     }
     public function Admin_update_page(Request $request, int $id){
         // $request->validate([
